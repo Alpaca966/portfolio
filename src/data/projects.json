@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Analizador de Sentimientos en Bluesky",
+    "description": "Sistema distribuido para monitorización y análisis de sentimiento en tiempo real sobre Bluesky mediante microservicios, Elastic Stack y aprovisionamiento 100% como código.",
+    "tags": ["Python", "Ansible", "Elastic Stack"],
+    "github_url": "https://github.com/Alpaca966/blueskyAnalizadorSentimientos"
+  },
+  {
+    "id": 2,
+    "title": "JKLM Bot - BombParty Automation",
+    "description": "Bot inteligente para automatizar partidas de BombParty en JKLM.fun. Cuenta con soporte multi-idioma, distintas estrategias y simulación de comportamiento humano.",
+    "tags": ["Python", "JavaScript", "WebSockets"],
+    "github_url": "https://github.com/Alpaca966/BombpartyBot"
+  },
+  {
+    "id": 3,
+    "title": "Naves (Space Shooter)",
+    "description": "Juego de disparos espacial arcade con sistema de combate, físicas, IA de enemigos, jefes finales y un modo torneo altamente configurable.",
+    "tags": ["Haskell", "Gloss", "GameDev"],
+    "github_url": "https://github.com/Alpaca966/Naves"
+  }
+]

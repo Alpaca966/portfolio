@@ -1,0 +1,34 @@
+---
+import projects from '../data/projects.json';
+---
+
+<section id="projects" class="scroll-mt-24 space-y-8">
+  <div class="flex items-center gap-4">
+    <span class="text-cyber-magenta text-2xl font-bold">#</span>
+    <h2 class="text-3xl font-bold tracking-tight">Proyectos_Destacados</h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {projects.map((p) => (
+      <article class="flex flex-col border border-cyber-gray bg-cyber-dark/30 hover:border-cyber-magenta/50 transition-colors p-6 rounded-sm h-full group">
+        <h3 class="text-xl font-bold text-cyber-light group-hover:text-cyber-accent transition-colors">>> {p.title}</h3>
+        <p class="text-gray-400 mt-4 mb-6 flex-grow">{p.description}</p>
+        
+        <div class="flex flex-wrap gap-2 mb-6">
+          {p.tags.map((tag) => (
+            <span class="px-2 py-1 text-xs border border-cyber-gray text-gray-400 rounded-sm">
+              {tag}
+            </span>
+          ))}
+        </div>
+        
+        {p.github_url && (
+            <a href={p.github_url} target="_blank" rel="noopener noreferrer" 
+               class="text-sm font-bold text-cyber-magenta hover:text-cyber-accent hover:underline decoration-wavy transition-colors inline-block w-max">
+              [ Ver Código Fuente ]
+            </a>
+        )}
+      </article>
+    ))}
+  </div>
+</section>

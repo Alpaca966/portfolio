@@ -1,23 +1,43 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import '../styles/global.css';
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Portfolio de estudiante de Ingeniería Informática (US)" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-cyber-dark text-cyber-light selection:bg-cyber-accent selection:text-cyber-dark antialiased overflow-x-hidden pt-16">
+    <nav class="fixed top-0 w-full bg-cyber-dark/80 backdrop-blur-md border-b border-cyber-accent/20 z-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="#" class="font-bold text-cyber-accent hover:text-cyber-magenta transition-colors">
+          >_ portfolio
+        </a>
+        <div class="flex gap-6 text-sm">
+          <a href="#about" class="hover:text-cyber-accent transition-colors">.sobre_mi()</a>
+          <a href="#skills" class="hover:text-cyber-accent transition-colors">.habilidades()</a>
+          <a href="#projects" class="hover:text-cyber-accent transition-colors">.proyectos()</a>
+        </div>
+      </div>
+    </nav>
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col gap-24">
+      <slot />
+    </main>
+    <footer class="border-t border-cyber-gray py-8 mt-12 text-center text-sm text-gray-500">
+      <p>José Manuel Mateos @ US</p>
+      <p class="mt-2 text-xs">Astro &middot; Tailwind CSS</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&display=swap');
+
+@theme {
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  --color-cyber-dark: #09090b;
+  --color-cyber-gray: #18181b;
+  --color-cyber-light: #f4f4f5;
+  --color-cyber-accent: #00ffcc;
+  --color-cyber-magenta: #ff00ff;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cyber-dark);
+    color: var(--color-cyber-light);
+    font-family: var(--font-mono);
+  }
+  
+  ::selection {
+    background-color: var(--color-cyber-accent);
+    color: var(--color-cyber-dark);
+  }
+}

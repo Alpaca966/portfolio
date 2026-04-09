@@ -1,0 +1,36 @@
+---
+const skills = [
+  { name: 'Java', level: 'Avanzado' },
+  { name: 'Python', level: 'Avanzado' },
+  { name: 'IA / ML (TensorFlow, Scikit-learn, Pandas, NumPy)', level: 'Intermedio' },
+  { name: 'JavaScript / TypeScript', level: 'Intermedio' },
+  { name: 'SQL / Bases de Datos', level: 'Intermedio' },
+  { name: 'Docker', level: 'Intermedio' },
+  { name: 'Git & GitHub', level: 'Intermedio' },
+  { name: 'Linux / Bash', level: 'Intermedio' },
+  { name: 'Haskell', level: 'Intermedio' },
+  { name: 'Infraestructura como Código (IaC)', level: 'Intermedio' },
+  { name: 'Astro & Tailwind', level: 'Básico' },
+  
+];
+---
+
+<section id="skills" class="scroll-mt-24 space-y-8">
+  <div class="flex items-center gap-4">
+    <span class="text-cyber-accent text-2xl font-bold">#</span>
+    <h2 class="text-3xl font-bold tracking-tight">Stack_Tecnológico</h2>
+  </div>
+  
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    {skills.map((skill) => (
+      <div class="border border-cyber-gray bg-cyber-dark/50 p-4 rounded-sm hover:border-cyber-accent/50 transition-colors group">
+        <div class="text-cyber-light font-bold mb-1 group-hover:text-cyber-accent transition-colors">
+          {skill.name}
+        </div>
+        <div class="text-xs text-gray-500 font-medium tracking-wider uppercase">
+          {skill.level}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
