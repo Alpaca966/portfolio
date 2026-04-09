@@ -1,9 +1,8 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Activa el despliegue cada vez que haces push a la rama principal
   push:
-    branches: [ main ] # Cambia a 'master' si tu rama principal se llama así
+    branches: [ main ]
   workflow_dispatch:
 
 permissions:
